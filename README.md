@@ -1,88 +1,122 @@
-iPrompt Builder
-Um plugin WordPress intuitivo para gerar prompts estruturados para Inteligências Artificiais.
+# 🧠 Prompt Builder
 
-Descrição
-O Propmpt Bulder e um plugin wordpress para criação de prompt para  Inteligências Artificiais
-foi criado com base em Desafio Técnico – Desenvolvedor(a) Full Stack WordPress.
-O plugin foi criado com ajuda de tecnicas de inteligencia artificial (Gemini) para desenvolver a interface e corrigir as ortografias incluindo esse arquivo.
+**Um plugin WordPress intuitivo para gerar prompts estruturados para Inteligências Artificiais.**
 
-Funcionalidades
-1- Geração de Prompts Estruturados: Crie prompts detalhados combinando um briefing base com múltiplos requisitos definidos pelo utilizador.
-2- Adição Dinâmica de Requisitos: Adicione e remova campos de requisitos (chave: valor) em tempo real na interface do utilizador.
-3- Criação de Rascunhos de Posts: Converta instantaneamente o prompt gerado ou a resposta da IA num rascunho de post no WordPress.
-4- Integração com IA (API): Conecte o plugin à sua chave de API de IA para enviar o prompt gerado e receber respostas diretamente no painel do WordPress.
+---
 
-Internacionalização: Pronto para traduções com suporte a text-domain.
+## 📄 Descrição
 
-Instalação
-Instalação Manual
-Descarregue o ficheiro .zip do plugin.
+**Prompt Builder** é um plugin WordPress criado para facilitar a geração de prompts para ferramentas de Inteligência Artificial.  
 
-No seu painel de administração do WordPress, vá para Plugins > Adicionar Novo > Carregar Plugin.
+Desenvolvido como parte do **Desafio Técnico – Desenvolvedor(a) Full Stack WordPress**, o plugin foi inteiramente elaborado com o auxílio de técnicas de IA (Gemini), incluindo a correção ortográfica e geração deste arquivo.
 
-Carregue o ficheiro .zip que descarregou.
+---
 
-Ative o plugin.
+## ⚙️ Funcionalidades
 
-Configuração da API da IA
-Após ativar o plugin, vá para Ferramentas > Prompt Builder no seu painel de administração do WordPress.
+✅ **Geração de Prompts Estruturados**  
+Crie prompts detalhados a partir de um briefing base, combinando com múltiplos requisitos definidos pelo usuário.
 
-Na secção "Configurações da API da IA", insira a sua chave de API da IA chave deve ser solicitada ao desenvolvedor.
+✅ **Adição Dinâmica de Requisitos**  
+Adicione ou remova campos de requisitos (em formato chave:valor) em tempo real.
 
-Clique em "Salvar".
+✅ **Criação de Rascunhos de Post**  
+Transforme o prompt gerado (ou a resposta da IA) em um rascunho de post WordPress com apenas um clique.
 
-Utilização
-No painel de administração do WordPress, navegue até Ferramentas > Prompt Builder.
+✅ **Integração com API de IA**  
+Conecte o plugin à sua chave de API de IA (como Gemini) e envie prompts diretamente do WordPress.
 
-Seção "Gerador de Prompts":
+🌍 **Internacionalização**  
+Pronto para tradução com suporte ao `text-domain`.
 
-No campo "Briefing", insira a sua ideia principal para o prompt.
+---
 
-Na secção "Requisitos", adicione pares de chave-valor que detalham o seu prompt (ex: "Tom: Formal", "Público: Desenvolvedores"). Use o botão "+ Requisito" para adicionar mais campos.
+## 🧩 Instalação
 
-Clique em "Gerar Prompt" para construir o prompt final.
+### 📦 Instalação Manual
 
-O prompt gerado aparecerá na área "Prompt Gerado".
+1. Baixe o arquivo `.zip` do plugin. (https://drive.google.com/file/d/1k7vm4Gzck1agaK9ayMjvRefiBTnoHoKk/view?usp=sharing)  
+2. No painel do WordPress, vá em **Plugins > Adicionar Novo > Carregar Plugin**.  
+3. Envie o `.zip` e clique em **Instalar Agora**.  
+4. Após instalado, clique em **Ativar Plugin**.
 
-Após gerar o prompt:
+---
 
-Pode clicar em "Criar Rascunho de Post" para salvar o conteúdo do prompt gerado como um novo rascunho de post no WordPress.
+## 🔑 Configuração da API
 
-Ou, clique em "Pedir pra IA" para enviar o prompt gerado para a IA configurada e ver a resposta na área "Resposta da IA".
+1. No painel do WordPress, acesse **Ferramentas > Prompt Builder**.  
+2. Na seção **"Configurações da API da IA"**, insira sua chave de API.  
+   > A chave deve ser solicitada ao desenvolvedor.  
+3. Clique em **Salvar**.
 
-Desenvolvimento e Testes
-Para desenvolvedores que desejam contribuir ou testar o plugin, o Prompt Builder inclui testes unitários baseados em PHPUnit.
+---
 
-Pré-requisitos para Testes
-É necessário um ambiente de teste WordPress configurado. Recomenda-se o uso de wp-env (Docker-based) ou uma configuração manual via wp-cli e install-wp-tests.sh.
+## ✨ Como Usar
 
-Usando wp-env
-Certifique-se de que tem o Docker Desktop e o @wordpress/env (npm install -g @wordpress/env) instalados.
+1. Acesse **Ferramentas > Prompt Builder**.  
+2. Em **Briefing**, insira a ideia central do prompt.  
+3. Em **Requisitos**, adicione pares de chave:valor (ex: `Tom: Formal`, `Público: Desenvolvedores`).  
+4. Clique em **Gerar Prompt** para visualizar o resultado.  
 
-Na raiz do seu plugin, configure o ficheiro .wp-env.json (se não existir):
+Após isso, você pode:
 
-{
-    "plugins": [
-        "."
-    ],
-    "tests": {
-        "php": "latest"
-    }
-}
+- ✅ Clicar em **Criar Rascunho de Post** para salvar como post.  
+- 🤖 Clicar em **Pedir pra IA** para enviar à API e receber a resposta diretamente na interface.
 
-Inicie o ambiente de teste:
+---
 
-wp-env start
+## 🧪 Desenvolvimento e Testes
 
-Corra os testes PHPUnit a partir da raiz do seu plugin:
+Este plugin inclui **testes unitários com PHPUnit** para garantir a estabilidade e funcionalidade da geração de prompts.
 
-wp-env run cli phpunit tests/
+### 🔧 Pré-requisitos
 
-(Ou wp-env run cli phpunit tests/test-pb-gerar-prompt.php para o teste específico.)
+- Ambiente de teste WordPress configurado.
+- Recomenda-se o uso de [`wp-env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) ou configuração manual com `wp-cli` e `install-wp-tests.sh`.
 
-Testes PHPUnit
-Os testes unitários para a função de geração de prompts estão localizados em tests/test-pb-gerar-prompt.php. Estes testes simulam diferentes cenários de entrada para a função pb_gerar_prompt para garantir que o prompt é formatado corretamente.
+### 🚀 Usando `wp-env`
 
-Licença
-Todos os direitos reservados a Arthur Felizdoro.
-Nenhuma modificação, redistribuição ou uso comercial é permitido sem autorização expressa do autor.
+1. Instale o Docker Desktop e o pacote global `@wordpress/env`:  
+   ```bash
+   npm install -g @wordpress/env
+   ```
+
+2. Crie um arquivo `.wp-env.json` na raiz do projeto (caso não exista):  
+   ```json
+   {
+     "plugins": [
+       "."
+     ],
+     "tests": {
+       "php": "latest"
+     }
+   }
+   ```
+
+3. Inicie o ambiente de testes:  
+   ```bash
+   wp-env start
+   ```
+
+4. Execute os testes:  
+   ```bash
+   wp-env run cli phpunit tests/
+   ```
+   Ou um teste específico:
+   ```bash
+   wp-env run cli phpunit tests/test-pb-gerar-prompt.php
+   ```
+
+### 📁 Arquivos de Teste
+
+- Os testes estão localizados em:  
+  `tests/test-pb-gerar-prompt.php`
+
+- Os cenários testam a função `pb_gerar_prompt` com diferentes combinações de briefing e requisitos.
+
+---
+
+## 📜 Licença
+
+Todos os direitos reservados a **Arthur Felizdoro**.  
+**Proibida** a modificação, redistribuição ou uso comercial **sem autorização expressa** do autor.
