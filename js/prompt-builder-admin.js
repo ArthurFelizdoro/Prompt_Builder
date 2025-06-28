@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Utilizado para exibir msg
     function pbShowMessage(message, type = "info") {
         const msgDiv = document.getElementById("pb-messages");
-         
+
         if (msgDiv) {
             msgDiv.textContent = message;
             msgDiv.className = "notice notice-" + type + " is-dismissible";

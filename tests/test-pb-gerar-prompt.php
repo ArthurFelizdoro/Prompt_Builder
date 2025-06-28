@@ -54,11 +54,10 @@ class PbGerarPromptTest extends WP_UnitTestCase
         $response = pb_gerar_prompt($request);
         $data = $response->get_data();
 
-       $expected_prompt = "Use Carro como Volvo XC60.\n";
+        $expected_prompt = "Use Carro como Volvo XC60.\n";
 
         $this->assertEquals(200, $response->get_status());
         $this->assertArrayHasKey('prompt', $data);
         $this->assertEquals($expected_prompt, $data['prompt']);
     }
-
 }
